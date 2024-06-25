@@ -23,13 +23,14 @@ const userValidationSchema = z.object({
         invalid_type_error: 'Password must be a string',
       })
       .min(4, { message: 'Password min 4 characters' })
-      .max(8, { message: 'Password can not be more than 8 characters' }),
+      .max(15, { message: 'Password can not be more than 15 characters' }),
     conformPassword: z
       .string({
         required_error: 'Conform Password is required',
         invalid_type_error: 'Conform Password must be a string',
       })
-      .min(1, { message: 'Conform Password cannot be empty' }),
+      .min(1, { message: 'Conform Password cannot be empty' })
+      .optional(),
     division: z
       .string({
         required_error: 'Division is required',

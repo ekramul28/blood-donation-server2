@@ -18,7 +18,6 @@ const userSchema = new Schema<TUser>(
     },
     conformPassword: {
       type: String,
-      required: true,
     },
     division: {
       type: String,
